@@ -1,0 +1,24 @@
+#mainBox {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 5000px;
+}
+
+// .mainBox .inner {
+//   width: 100%;
+//   transform: translateX(0%);
+//   overflow: scroll;
+//   transition: transform 0.3s ease;
+// }
+
+// .mainBox .inner::-webkit-scrollbar {
+//   display: none;
+// }
+
+// .mainBox .inner .item {
+//   width: 100vw;
+//   display: block;
+//   height: 100vh;
+//   float: left;
+// }

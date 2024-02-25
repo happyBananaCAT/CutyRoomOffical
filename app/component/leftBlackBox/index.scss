@@ -1,0 +1,86 @@
+.left_black_box {
+  .core_box {
+    z-index: 100;
+    position: absolute;
+    top: 34%;
+    left: 16%;
+    //宽高需要调整
+    width: 6rem;
+    height: 4.5rem;
+    background-color: #111;
+    transition: all 1.2s;
+
+    &::before,
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #000;
+      transition: inherit;
+    }
+    //竖线
+    &::before {
+      width: 0.04rem;
+      height: 108vh;
+      transform: translateY(-50%) rotateZ(180deg);
+      transition: inherit;
+    }
+    //横线
+    &::after {
+      width: 100vw;
+      height: 0.04rem;
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.unactive {
+  .left_black_box {
+    .core_box {
+      top: 50%;
+      left: 50%;
+      width: 5.5rem;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        opacity: 1;
+        transform: translateY(-50%) rotateZ(45deg);
+        width: 0.04rem;
+        height: 300vh;
+      }
+
+      &::after {
+        opacity: 1;
+        transform: translateX(-50%) rotateZ(45deg);
+        width: 300vw;
+        height: 0.04rem;
+      }
+    }
+  }
+}
+
+//媒体查询
+@media screen and (max-width: 992px) {
+  .mobile {
+    .left_black_box {
+      .core_box {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &::before {
+          opacity: 0;
+          transform: translateY(-50%) rotateZ(90deg);
+        }
+
+        &::after {
+          opacity: 1;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

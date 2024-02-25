@@ -1,0 +1,85 @@
+.right_background {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  right: 0;
+  top: 0;
+  width: 20rem;
+  height: 100%;
+  transform: translateZ(0);
+  transition: opacity 0.8s;
+
+  .X_decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 33.33%;
+    min-height: 25%;
+
+    .dot {
+      position: relative;
+      width: 2px;
+      height: 2px;
+      background-color: #000;
+    }
+
+    .top,
+    .right,
+    .bottom,
+    .left {
+      position: absolute;
+      transition: width 0.8s;
+    }
+
+    .left,
+    .right {
+      width: 1rem;
+      height: 1px;
+    }
+
+    .top,
+    .bottom {
+      width: 1px;
+      height: 1rem;
+    }
+
+    .top {
+      bottom: 0.2rem;
+      background: linear-gradient(transparent, #000);
+    }
+
+    .left {
+      right: 0.2rem;
+      background: linear-gradient(90deg, transparent, #000);
+    }
+
+    .right {
+      left: 0.2rem;
+      background: linear-gradient(90deg, #000, transparent);
+    }
+
+    .bottom {
+      top: 0.2rem;
+      background: linear-gradient(#000, transparent);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mobile {
+    .right_background {
+      top: 50%;
+      width: 45%;
+      height: 80%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.unactive {
+  .right_background {
+    opacity: 0;
+  }
+}

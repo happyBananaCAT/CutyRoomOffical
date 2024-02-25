@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "NWB";
+  src: url("../../../public/assest/Font/Novecento-Wide-Bold.otf");
+}
+
+.left_top_text {
+  position: absolute;
+  top: 8%;
+  left: 3%;
+  width: 5.6rem;
+  transition: all 0.8s;
+
+  .name,
+  .info,
+  .os {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name {
+    font-family: "NWB";
+    font-size: 1rem;
+  }
+
+  .info {
+    font-family: "NWB";
+    font-size: 0.48rem;
+    overflow: hidden;
+  }
+
+  .os {
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    strong {
+      font-family: "NWB";
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mobile {
+    .left_top_text {
+      width: 100%;
+      top: 3%;
+      left: 0;
+
+      .name,
+      .info,
+      .os {
+        display: flex;
+        justify-content: center;
+      }
+
+      .info {
+        display: none;
+      }
+    }
+  }
+}
+
+.unactive {
+  .left_top_text {
+    filter: blur(5px);
+  }
+}

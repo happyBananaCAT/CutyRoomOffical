@@ -1,0 +1,21 @@
+.LeftBg {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mask: linear-gradient(90deg, #778993, transparent 100%);
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+//加载完成后
+.startProcess {
+  .LeftBg {
+    opacity: 1;
+  }
+}
