@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "NWB";
-  src: url("../public/assest/Font/Novecento-Wide-Bold.otf");
+    font-family: "NWB";
+    src: url("../public/assest/Font/Novecento-Wide-Bold.otf");
+}
+
+html {
+    user-select: none;
 }
